@@ -1,15 +1,168 @@
 $red: #B21409
 $white: #EEECE8
+$black: #1F0405
+
+
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font: bold 14px Arial, sans-serif
 
 body
-    background: $red
+    background: url(../images/swirl_pattern.png)
 .top
-	margin-top: 20px
+	margin: 20px auto
+	position: relative
+	
 	h2
 		font-size: 36pt
-		color: $white
+		color: $black
 
 #header2
 	font-weight: 600
 	font-family: tre-buchet
 	color: $white
+
+
+
+
+.pomodoro
+	margin: -90px 35px 17px 47px
+
+	.screen
+		width: 300px
+		height: 80px
+		background: #c62828
+		text-align: center
+		box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,0.5)
+		span
+			padding: 20px	
+			color: $white
+			font-size: 36pt
+			position: relative
+			top: 13px
+
+
+.analog
+	width: 300px
+	height: 130px
+	margin: -70px 35px 17px 47px
+	background: $red
+	border: 2px solid $white
+	border-radius: 5%
+	overflow: hidden
+	cursor: ew-resize
+	position: relative
+	box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.5)
+
+	
+
+	&::before, &::after 
+		content: ''
+		display: block
+		position: absolute
+	
+	&::before 
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 10px 20px 10px
+		border-color: transparent transparent #F2F2F2 transparent
+		left: 140px
+		top: 90px
+	
+.tomato
+	width: 400px
+	height: 400px
+	margin: 40px auto
+	background: $red
+	border: 2px solid $white
+	border-radius: 50%
+	overflow: hidden
+	box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.5)
+
+	
+
+
+#timeline 
+	width: 676px
+	height: 50px
+	top: 30px
+	left: 150px
+	background: url("../images/pomodoro.png") no-repeat
+	background-size: 100% 100% 
+	position: absolute
+
+
+
+.btn 
+	border: none
+	font-family: inherit
+	font-size: inherit
+	color: inherit
+	background: none
+	cursor: pointer
+	padding: 15px 36px
+	display: inline-block
+	margin: 5px 1px
+	text-transform: uppercase
+	letter-spacing: 1px
+	font-weight: 700
+	outline: none
+	position: relative
+	-webkit-transition: all 0.3s
+	-moz-transition: all 0.3s
+	transition: all 0.3s
+
+	&::after 
+		content: ''
+		position: absolute
+		z-index: -1
+		-webkit-transition: all 0.3s
+		-moz-transition: all 0.3s
+		transition: all 0.3s
+
+.btn-2 
+	background: #cb4e4e
+	color: #fff
+	box-shadow: 0 6px #8E2727
+	-webkit-transition: none
+	-moz-transition: none
+	transition: none
+
+.btn-2h 
+	border-radius: 2px
+	&::hover 
+		box-shadow: 0 4px #8E2727
+		top: 2px
+
+	&::active 
+		box-shadow: 0 0px #8E2727
+		top: 6px
+
+
+.s-btn
+	padding: 5px 10px
+	font-size: 6pt
+
+.f-row1
+	margin: 10px 88px
+.f-row2
+	margin-left: 20px
+.stem 
+	z-index: 2
+	width: 210px
+	top: -56px
+	left: 75px
+	height: auto
+	position: relative
+	pointer-events: none
+	use 
+		fill: green
+	
+
+
+.hide
+	display: none
+

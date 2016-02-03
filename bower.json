@@ -1,0 +1,27 @@
+{
+  "name": "Pomodoro App",
+  "description": "Pomodoro App",
+  "main": "index.html",
+  "authors": [
+    "Joe Richardson"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "scss",
+    "js",
+    "images"
+  ],
+  "homepage": "https://github.com/Necmttn/Pomodoro-App",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gsap": "^1.18.2"
+  }
+}

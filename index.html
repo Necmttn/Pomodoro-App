@@ -7,17 +7,40 @@
 	</head>
 	<body>
 		<div class="top">
-			<h2 class="header2">Pomodoro App</h2>	
+			<h2 class="header2">Pomodoro App</h2>
+			<button onclick="analog()" class="btn btn-2 btn-2h">Analog</button>
+			<button onclick="digital()" class="btn btn-2 btn-2h">Digital</button>
 		</div>
-		<div class="pomodoro">
-			<button onclick="startTime()">Start Watch</button>
-			<span id="clock">12:12:12</span>
-			<button onclick="pomodoro()">Pomodoro</button>
-			<button onclick="shortRest()">Short Rest</button>
-			<button onclick="longRest()">Long Rest</button>
-			<span id="timer"></span>
+		<svg style="display:none;"><defs><path id="stempath" d="M45.263 56.325c-4.153 2.877-8.688 3.997-13.684 2.947-6.75-1.42-12.658-.133-17.343 5.274-.444.513-1.154.795-1.945.841 8.279-12.713 19.369-20.347 35.181-19.185-1.142-4.912-2.697-9.386-8.229-10.989 8.393-2.329 14.908.648 20.39 6.482 4.967-3.077 7.65-6.526 12.7-16.222 2.45 6.292 1.399 11.899-3.969 20.682 3.378 1.556 6.882 2.05 10.168.448 3.099-1.51 5.857-3.72 9.176-5.891-1.793 6.643-5.919 10.74-11.471 13.709-5.747 3.074-11.571 1.879-16.764.42l-9.355 19.685c-4.165-4.978-4.672-11.17-4.276-17.6l.219-.991-.798.39z"/></defs></svg>
+		<div class="tomato">
+		<svg class="stem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><use xlink:href="#stempath"></use></svg>
+		<div class="analog">
+			<div id="timeline"></div>
+			<div id="timemark"></div>
 		</div>
-   	<script src="js/min/scripts.min.js"></script>
-		<script src="js/min/pomodoro.min.js"></script>
-	</body>
+		<div class="pomodoro hide">
+			<div class="screen">
+				<span id="timer">00:00:00</span>
+			</div>
+			<div class="buttons">
+				<div class="f-row1 hide">
+					<button class="btn btn-2  btn-2h s-btn" id="start-pause" onclick="start()">Start</button>
+					<button class="hide btn btn-2 btn-2h s-btn" id="pause"  onclick="pause()">Pause</button>
+					<button class="btn btn-2 btn-2h s-btn" onclick="reset()">Reset</button>
+				</div>
+				<div class="f-row2">
+					<button class="btn btn-2 btn-2h s-btn" onclick="pomodoro()">Pomodoro</button>
+					<button class="btn btn-2 btn-2h s-btn" onclick="shortRest()">Short Rest</button>
+					<button class="btn btn-2 btn-2h s-btn" onclick="longRest()">Long Rest</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+	<script src="js/min/scripts.min.js"></script>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.26/howler.min.js'></script>
+	<script src="js/pomodoro.js"></script>
+</body>
 </html>
